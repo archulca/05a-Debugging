@@ -3,8 +3,8 @@ This module lets you practice DEBUGGING when RUN-TIME EXCEPTIONS occur.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Valerie Galluzzi, Mark Hays, Amanda Stouder, Aaron Wilkin,
-         their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues, and Carla Archuleta.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -238,9 +238,10 @@ def broken_3(n, point, length, distance_between_lines, window):
 
     for _ in range(n):
         line = rg.Line(a, b)
+        b = b + distance_between_lines
         line.attach_to(window)
         window.render(0.5)
-        b = b + distance_between_lines
+
 
 
 # -----------------------------------------------------------------------------
@@ -263,7 +264,7 @@ def broken_4(x, y, radius, window):
       :type radius: int
       :type window: rg.RoseWindow
       """
-    circle = rg.Circle(rg.Point(x, y), 'radius')
+    circle = rg.Circle(rg.Point(x, y), radius)
     circle.fill_color = 'green'
     circle.attach_to(window)
     window.render()
