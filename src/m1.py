@@ -234,11 +234,11 @@ def broken_3(n, point, length, distance_between_lines, window):
       :type window:                 rg.RoseWindow
     """
     a = rg.Point(point.x, point.y)
-    b = rg.Point(point.x, point.y + length)
+    b = rg.Point(point.x, point.y + int(length))
 
     for _ in range(n):
         line = rg.Line(a, b)
-        b = b + distance_between_lines
+        b = b + int(distance_between_lines)
         line.attach_to(window)
         window.render(0.5)
 
